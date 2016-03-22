@@ -66,7 +66,6 @@ Start a new animation tweening data on the observable state. Automatically finis
 
 
 *Required*
-
 Type: `observable`
 
 Mutable state object to modify. The animation will call `.set` on the state during animation frames.
@@ -76,7 +75,6 @@ Mutable state object to modify. The animation will call `.set` on the state duri
 
 
 *Required*
-
 Type: `object`
 
 The destination data of the animation.
@@ -86,7 +84,6 @@ The destination data of the animation.
 
 
 *Required*
-
 Type: `int`
 
 Time in milliseconds for the animation to last.
@@ -96,7 +93,6 @@ Time in milliseconds for the animation to last.
 
 
 *Required*
-
 Type: `ease`
 
 An easing from `require('micro-tween/ease/...')` to use for the animation.
@@ -110,7 +106,6 @@ Completes the currently running animation.
 
 
 *Required*
-
 Type: `observable`
 
 Used to look up the running animation in the weak map.
