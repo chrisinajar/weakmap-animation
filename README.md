@@ -2,7 +2,7 @@
 Managed tweening of observable values in a weak map
 
 ## Usage
-```
+```js
 var Animation = require('weakmap-animation');
 var State = require('dover');
 var Struct = require('observ-struct');
@@ -46,4 +46,75 @@ Component.render = function (state) {
     style: style
   })
 }
-```js
+```
+
+# API
+#### `Animation.init()`
+Starts the `raf` loop for tweening animations. If the loop is already running, does nothing.
+
+#### `Animation.stop()`
+Stops the `raf` loop for tweening animations. If the loop is not already running, does nothing.
+
+#### `Animation()` -> `animation`
+Create a new animation weakmap.
+
+#### `animation.start(state, to, duration, ease)`
+Start a new animation tweening data on the observable state. Automatically finishes any previously running animation.
+
+
+**state**
+
+
+*Required*
+
+Type: `observable`
+
+Mutable state object to modify. The animation will call `.set` on the state during animation frames.
+
+
+**to**
+
+
+*Required*
+
+Type: `object`
+
+The destination data of the animation.
+
+
+**duration**
+
+
+*Required*
+
+Type: `int`
+
+Time in milliseconds for the animation to last.
+
+
+**ease**
+
+
+*Required*
+
+Type: `ease`
+
+An easing from `require('micro-tween/ease/...')` to use for the animation.
+
+
+#### `animation.finish(state)`
+Completes the currently running animation.
+
+
+**state**
+
+
+*Required*
+
+Type: `observable`
+
+Used to look up the running animation in the weak map.
+
+
+# License
+MIT
