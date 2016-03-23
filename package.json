@@ -1,6 +1,6 @@
 {
   "name": "weakmap-animation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Managed tweening of observable values in a weak map",
   "main": "index.js",
   "scripts": {
