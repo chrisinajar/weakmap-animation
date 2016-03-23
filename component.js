@@ -8,6 +8,8 @@ var clickEvent = require('value-event/click');
 
 module.exports = Component;
 
+Animation.init();
+
 function Component (data) {
   var state = Dover({
     position: Struct({
@@ -42,7 +44,7 @@ Component.render = function (state) {
     'background-color': 'blue',
     display: 'flex',
     flex: 1,
-    transform: 'translate3d(' + state.position.x + ',' + state.position.y + ',0)'
+    transform: 'translate3d(' + state.position.x + 'px ,' + state.position.y + 'px ,0)'
   };
 
   return h('div', {

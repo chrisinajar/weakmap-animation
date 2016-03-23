@@ -20,9 +20,6 @@ function Animation () {
       throwError('You must pass an observable to start');
     }
 
-    // finish before reading state
-    finish(state);
-
     var animation = Tween(state())
       .to(to)
       .ease(ease);
