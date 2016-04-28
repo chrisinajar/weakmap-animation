@@ -63,7 +63,11 @@ function init () {
     return;
   }
   isStopped = false;
-  return tick();
+
+  // kick off the loop
+  tick();
+
+  return stop;
 
   function tick () {
     if (isStopped) {
